@@ -1,0 +1,176 @@
+{
+	"info": {
+		"_postman_id": "ff77ec4f-8be1-43f7-839d-80e4a330cacd",
+		"name": "Facebook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17282638"
+	},
+	"item": [
+		{
+			"name": "Đăng bài",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "https://graph.facebook.com/v15.0/104909051219656/feed?message=Test%20API%202&access_token=EAAFteTHeFvwBAGTX3BsZCntLazUEpGAMICAPb19denBgHhpzDdBV7nQ2lfUdAIxrfrk8GU70Amcv4EbsTJHIO1CjwZAvVSMqGAobgCZClshxYXeLYuzStZBtWZCxiZCqUzoVj8SDLPdQ7ZAhwbCTZAqZAuYYZBuKqBBeurUSYW3PHO2mNSd2nLWQrCdjyLL4xTY6QSZAlDyZC8fsJt82Q6x6jP4I&link=www.code-mega.com",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"v15.0",
+						"104909051219656",
+						"feed"
+					],
+					"query": [
+						{
+							"key": "message",
+							"value": "Test%20API%202"
+						},
+						{
+							"key": "access_token",
+							"value": "EAAFteTHeFvwBAGTX3BsZCntLazUEpGAMICAPb19denBgHhpzDdBV7nQ2lfUdAIxrfrk8GU70Amcv4EbsTJHIO1CjwZAvVSMqGAobgCZClshxYXeLYuzStZBtWZCxiZCqUzoVj8SDLPdQ7ZAhwbCTZAqZAuYYZBuKqBBeurUSYW3PHO2mNSd2nLWQrCdjyLL4xTY6QSZAlDyZC8fsJt82Q6x6jP4I"
+						},
+						{
+							"key": "link",
+							"value": "www.code-mega.com"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Xóa bài",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://graph.facebook.com/104909051219656_417683150525837?access_token=EAAFteTHeFvwBAGTX3BsZCntLazUEpGAMICAPb19denBgHhpzDdBV7nQ2lfUdAIxrfrk8GU70Amcv4EbsTJHIO1CjwZAvVSMqGAobgCZClshxYXeLYuzStZBtWZCxiZCqUzoVj8SDLPdQ7ZAhwbCTZAqZAuYYZBuKqBBeurUSYW3PHO2mNSd2nLWQrCdjyLL4xTY6QSZAlDyZC8fsJt82Q6x6jP4I",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"104909051219656_417683150525837"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "EAAFteTHeFvwBAGTX3BsZCntLazUEpGAMICAPb19denBgHhpzDdBV7nQ2lfUdAIxrfrk8GU70Amcv4EbsTJHIO1CjwZAvVSMqGAobgCZClshxYXeLYuzStZBtWZCxiZCqUzoVj8SDLPdQ7ZAhwbCTZAqZAuYYZBuKqBBeurUSYW3PHO2mNSd2nLWQrCdjyLL4xTY6QSZAlDyZC8fsJt82Q6x6jP4I"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Long Token Expried",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"error\": {\r\n        \"message\": \"Error validating access token: Session has expired on Wednesday, 12-Oct-22 11:00:00 PDT. The current time is Wednesday, 12-Oct-22 22:15:44 PDT.\",\r\n        \"type\": \"OAuthException\",\r\n        \"code\": 190,\r\n        \"error_subcode\": 463,\r\n        \"fbtrace_id\": \"AZuckHIAaOmxw6oIHmjIAgT\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://graph.facebook.com/v15.0/oauth/access_token?grant_type=fb_exchange_token&client_id=401842271819516&client_secret=03062226efdae7b753b28389193d79ab&fb_exchange_token=EAAFteTHeFvwBAEZCLMH1bZA0DAuio2fOL6sQnwRRMxKohQBUqnmcvuvxwkjHYjUAYZAtqT8rZCZA7DZAZABlZBBpBMCHTZB0eRGj6GqI1vXCg6Rxe8ZBx9jx6FMU3ZAni5nVUchLGrtBk1cNbjPiiLzynEFQsHFsBeubCTvlDnYSpqfggZDZD",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"v15.0",
+						"oauth",
+						"access_token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "fb_exchange_token"
+						},
+						{
+							"key": "client_id",
+							"value": "401842271819516"
+						},
+						{
+							"key": "client_secret",
+							"value": "03062226efdae7b753b28389193d79ab"
+						},
+						{
+							"key": "fb_exchange_token",
+							"value": "EAAFteTHeFvwBAEZCLMH1bZA0DAuio2fOL6sQnwRRMxKohQBUqnmcvuvxwkjHYjUAYZAtqT8rZCZA7DZAZABlZBBpBMCHTZB0eRGj6GqI1vXCg6Rxe8ZBx9jx6FMU3ZAni5nVUchLGrtBk1cNbjPiiLzynEFQsHFsBeubCTvlDnYSpqfggZDZD"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Final Token",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"error\": {\r\n        \"message\": \"Error validating access token: Session has expired on Wednesday, 12-Oct-22 11:00:00 PDT. The current time is Wednesday, 12-Oct-22 22:15:44 PDT.\",\r\n        \"type\": \"OAuthException\",\r\n        \"code\": 190,\r\n        \"error_subcode\": 463,\r\n        \"fbtrace_id\": \"AZuckHIAaOmxw6oIHmjIAgT\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://graph.facebook.com/v15.0/oauth/access_token?grant_type=fb_exchange_token&client_id=401842271819516&client_secret=03062226efdae7b753b28389193d79ab&fb_exchange_token=EAAFteTHeFvwBAEZCLMH1bZA0DAuio2fOL6sQnwRRMxKohQBUqnmcvuvxwkjHYjUAYZAtqT8rZCZA7DZAZABlZBBpBMCHTZB0eRGj6GqI1vXCg6Rxe8ZBx9jx6FMU3ZAni5nVUchLGrtBk1cNbjPiiLzynEFQsHFsBeubCTvlDnYSpqfggZDZD",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"v15.0",
+						"oauth",
+						"access_token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "fb_exchange_token"
+						},
+						{
+							"key": "client_id",
+							"value": "401842271819516"
+						},
+						{
+							"key": "client_secret",
+							"value": "03062226efdae7b753b28389193d79ab"
+						},
+						{
+							"key": "fb_exchange_token",
+							"value": "EAAFteTHeFvwBAEZCLMH1bZA0DAuio2fOL6sQnwRRMxKohQBUqnmcvuvxwkjHYjUAYZAtqT8rZCZA7DZAZABlZBBpBMCHTZB0eRGj6GqI1vXCg6Rxe8ZBx9jx6FMU3ZAni5nVUchLGrtBk1cNbjPiiLzynEFQsHFsBeubCTvlDnYSpqfggZDZD"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
